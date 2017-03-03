@@ -1027,6 +1027,10 @@ footer {
 footer:last-child {
   margin-bottom: 0;
 }
+footer a,
+footer small {
+  display: block;
+}
 nav a {
   border-radius: 0.3rem;
   border: none;

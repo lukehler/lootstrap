@@ -1031,6 +1031,10 @@ footer a,
 footer small {
   display: block;
 }
+footer small {
+  line-height: 2.4rem;
+  text-align: right;
+}
 nav a {
   border-radius: 0.3rem;
   border: none;

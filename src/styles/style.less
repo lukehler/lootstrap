@@ -1,0 +1,50 @@
+/*	********************************
+ *	LOOTSTRAP
+ *	********************************
+ */
+
+// Starting with the variables...
+	@import (reference) 'lootstrap/core-variables.less';
+
+// Override any values you'd like, here. See core-variables.less for default values and examples.
+
+// Continue to load the mixins, now that we have our variables.
+	// See core-mixins.less for examples on how to override the defaults non-destructively.
+	@import (reference) 'lootstrap/core-mixins.less';
+
+// With all the mixins covered, load the elements and classes.
+	// Again, see the core files for examples on how to load the elements and classes easily or how to customize them.
+	@import 'lootstrap/core-elements.less';
+	@import 'lootstrap/core-classes.less';
+
+// And lastly, load any modules you may wish to use.
+	@import 'lootstrap/modules/mod-grid.less';
+	@import 'lootstrap/modules/mod-buttons.less';
+	@import 'lootstrap/modules/mod-accordions.less';
+
+// And now let's add our site-specific styles.
+
+// Add our "skip to main content" link.
+#top {
+	.skip-link();
+}
+
+// Set up a little vertical flex to stick the footer to the bottom, even on very short pages.
+body {
+	display: flex;
+	flex-direction: column;
+	main {
+		flex-grow: 1;
+		> .wrapper {
+			margin-top: @vr;
+			margin-bottom: @vr;
+		}
+	}
+}
+// We could add classes from mod-grid to our markup, or we can just use the mixins to apply the same properties
+main {
+	.grid-item( 9 ); // default is 12 columns, so 9/12 = 3/4.
+}
+footer {
+	.grid-item( 3 ); // default is 12 columns, so 3/12 = 1/4.
+}

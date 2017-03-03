@@ -1,0 +1,25 @@
+//	********************************
+//	CUSTOM UTILITY MIXINS
+//	********************************
+
+// Let's say, just for the sake of argument, that you want to update a core mixin file to match your site - in this case, making the default for .transition a slow opacity change.
+// That could save you a lot of redundant `.transition( opacity, @slow );` and let you just write `.transition();`. Not a bad idea, if that's the main thing your site is using.
+// To do so, you can just copy the existing file and update the .transition() mixin with your defaults.
+// Then import the individual mixin files as outlined in core-mixins.less and include this one in stead of the core utilities.
+
+// UTILITY MIXINS
+	// .clearfix()
+	// .transition()
+
+// Only add border-radius properties if @border-radius > 0.
+// If you just add `border-radius: @br;`, the resultant CSS is slightly more verbose and could have unintended side effects. So let's not include it at all, unless it's relevant.
+.border-radius( @br ) when ( @border-radius > 0 ){
+	border-radius: @br;
+}
+
+// For our purposes, we're consistently transitioning opacity only, and using @slow as the default.
+// It could make your actual work less error-prone to override the core defaults, so let's do that as an example.
+.transition( @props: opacity; @duration: @slow; ) {
+	transition-property: @props;
+	transition-duration: @duration;
+}

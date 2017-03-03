@@ -546,6 +546,19 @@ hr:before {
 .bg-inline {
   padding: 0.4rem 0.4rem 0.2rem;
 }
+.bg a,
+.bg-primary a,
+.bg-secondary a,
+.bg-light a {
+  color: inherit;
+  text-decoration: underline;
+}
+.bg a:hover,
+.bg-primary a:hover,
+.bg-secondary a:hover,
+.bg-light a:hover {
+  text-decoration: none;
+}
 @media screen and (max-width: 767px) {
   table.collapse tr,
   table.collapse th,

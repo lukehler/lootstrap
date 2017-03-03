@@ -48,3 +48,47 @@ main {
 footer {
 	.grid-item( 3 ); // default is 12 columns, so 3/12 = 1/4.
 }
+
+
+// Let's set up a really simple header.
+nav a {
+	.btn( @secondary, @secondary-over);
+	margin-bottom: @vr/2;
+	display: block;
+	text-align: left;
+	@media screen and ( min-width: @screen-sm ) {
+		display: inline-block;
+	}
+}
+@media screen and ( min-width: @screen-md ) {
+	#site-header > .container {
+		display: flex;
+		justify-content: space-between;
+		h1,
+		nav {
+			flex: 1 0 auto;
+		}
+	}
+	nav {
+		flex: 1 0 auto;
+		display: flex;
+		justify-content: flex-end;
+		margin-top: @vr/2;
+		margin-bottom: @vr/2;
+		margin-right: -@vr/2;
+		a {
+			flex: 0 0 auto;
+			.btn-small();
+			margin-bottom: 0;
+			border-radius: 0;
+			border-right: 1px solid @white;
+			&:first-child {
+				border-radius: @border-radius 0 0 @border-radius;
+			}
+			&:last-child {
+				border-right: 0;
+				border-radius: 0 @border-radius @border-radius 0;
+			}
+		}
+	}
+}

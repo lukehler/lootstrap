@@ -23,3 +23,16 @@
 .bg-inline {
 	padding: (@vr/6) (@grid/3) (@vr/12);// .4rem .4rem .2rem; copied from kbd,code,samp elements
 }
+
+.bg,
+.bg-primary,
+.bg-secondary,
+.bg-light {
+	a {
+		color: inherit;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

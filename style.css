@@ -546,6 +546,19 @@ hr:before {
 .bg-inline {
   padding: 0.4rem 0.4rem 0.2rem;
 }
+.bg a,
+.bg-primary a,
+.bg-secondary a,
+.bg-light a {
+  color: inherit;
+  text-decoration: underline;
+}
+.bg a:hover,
+.bg-primary a:hover,
+.bg-secondary a:hover,
+.bg-light a:hover {
+  text-decoration: none;
+}
 @media screen and (max-width: 767px) {
   table.collapse tr,
   table.collapse th,
@@ -1013,4 +1026,89 @@ footer {
 }
 footer:last-child {
   margin-bottom: 0;
+}
+nav a {
+  border-radius: 0.3rem;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  height: 4.8rem;
+  line-height: 4.8rem;
+  max-width: 100%;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  padding: 0 3rem;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: auto;
+  vertical-align: top;
+  background-color: #07a;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  display: block;
+  text-align: left;
+}
+nav a:link,
+nav a:visited {
+  text-decoration: none;
+}
+nav a:focus,
+nav a:hover,
+nav a:active {
+  color: #fff;
+  background-color: #005377;
+}
+nav a:focus {
+  outline: 1px dotted #555555;
+}
+@media screen and (min-width: 768px) {
+  nav a {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 960px) {
+  #site-header > .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  #site-header > .container h1,
+  #site-header > .container nav {
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+  }
+  nav {
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    margin-right: -1.2rem;
+  }
+  nav a {
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    padding: 0 1.2rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    border-radius: 0;
+    border-right: 1px solid #fff;
+  }
+  nav a:first-child {
+    border-radius: 0.3rem 0 0 0.3rem;
+  }
+  nav a:last-child {
+    border-right: 0;
+    border-radius: 0 0.3rem 0.3rem 0;
+  }
 }

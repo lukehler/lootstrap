@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if (lt IE 9) ]>			<html lang="en" class="no-js oldie">	<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->	<html lang="en" class="no-js">		<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Lootstrap</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="style.min.css" />
+	<script>
+		// Toggle on the .js class if javascript is available
+		var html=document.getElementsByTagName('html').item(0); // There can be only one.
+		html.classList.remove('no-js');
+		html.classList.add('js');
+		// Note that the html variable is available for further javascript as well.
+	</script>	
+</head>
+<body>
+	<a id="top" href="#main-content" class="skip-link">Skip to main content</a>
+
+	<header id="site-header" role="banner">
+		<div class="container">
+			<h1 id="site-identifier"><a href="/">Lootstrap</a></h1>
+			<nav role="navigation">
+				<a href="#overview">Overview</a>
+				<a href="#elements">Elements</a>
+				<a href="#classes">Classes</a>
+			</nav>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="grid">
+			<main id="main-content">
+				<div class="grid-inner">
+
+<!-- sections are appended here -->
+<section id="overview" class="view">
+	<h2>Overview</h2>
+
+	<p>Lootstrap started life as a direct port of <a href="https://cutestrap.com">Cutestrap</a> and simply wouldn't exist without it. The core of the vertical rhythm and forms is still primarily the work of <a href="https://github.com/tylerchilds/">Tyler Childs</a>. While I'm still using Cutestrap with a few modifications for a few other sites with text-heavy content, I also wanted something built to be customized further—mostly through configuration. Lastly, old habits die hard and I prefer a different naming convention, specifically one derived from Twitter Bootstrap.
+
+	<p>Lootstrap is not intended to be used as-is. There's nothing stopping you from <a href="lootstrap.min.css">grabbing the compiled CSS</a> (which is only ~12k before gzip compression) and throwing it in a <code>link</code> if you really want to do so, but that doesn't really get you a whole lot of utility. Instead, the intention is for you to build your own custom styles using the core as a library of LESS variables and mixins, with some Cutestrap-inspired defaults. The basic flow to make that happen is pretty simple:
+
+	<ol>
+		<li>Create your core stylesheet (<code>/src/styles/style.less</code>, in this case).
+		<li>Import the Lootstrap variables (as easy as <code>@import (reference) 'lootstrap/core-variables.less';</code>).
+		<li>Update/override any variables you want. Look through the core variables file mentioned above for examples and info.
+		<li>Include mixins–whether you want to use the defaults, your own custom variations, or a mixture of both.
+		<li>Now you can include the core elements and classes, using your customized variables and mixins.
+		<li>Optionally, you can include any modules you may want to use. The core modules simply act as shortcuts for the default mixins.
+		<li>Append any additional styles in LESS, using the variables and mixins available to you from steps 2–4.
+		<li>Let grunt compile your CSS, apply vendor prefixes, and minify the results.
+	</ol>
+
+</section>
+<section id="elements" class="view">
+	<h2>Elements</h2>
+</section>
+<section id="classes" class="view">
+	<h2>Classes</h2>
+</section>
+
+
+				</div>
+			</main>
+
+			<footer id="site-footer" role="contentinfo">
+				<div class="grid-inner">
+					<p><a href="https://lukehler.github.io/lootstrap">site</a>
+					<p><a href="https://github.com/lukehler/lootstrap">repository</a>
+					<p>&copy; 2017
+				</div>
+			</footer>
+
+		</div>
+	</div>
+
+	<script>
+		// For a single page, may as well just stick any javascript we need inline here.
+		// An http request saved is an http request earned.
+		
+		// Note that we already have html from the header
+	</script>
+
+	<!-- remove livereload line for delivery!
+	<script src="//localhost:2112/livereload.js"></script> -->
+
+</body>
+</html>

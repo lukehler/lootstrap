@@ -1,7 +1,7 @@
 {
   "name": "lootstrap",
   "title": "Lootstrap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "main.js",
   "license": "MIT",
   "description": "Lootstrap is a simple, type-focused, extensible CSS library with an opinionated LESS workflow. It started off as a LESS port of Cutestrap ( https://www.cutestrap.com/ ), but in practice, I wanted something a little more configurable and using Twitter Bootstrap-style naming conventions.",

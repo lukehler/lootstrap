@@ -1,6 +1,6 @@
 # Lootstrap
 
-Lootstrap is a tiny CSS framework with [Cutestrap](https://cutestrap.com)-derived type styles, [Bootstrap](https://getbootstrap.com)-style conventions, and a bunch of LESS mixins and variables to help speed along custom front end development.
+Lootstrap is a tiny LESS framework with [Cutestrap](https://cutestrap.com)-derived type styles, [Bootstrap](https://getbootstrap.com)-style conventions, and a bunch of LESS mixins and variables to help speed along custom front end development.
 
 Lootstrap started life as a direct port of Cutestrap while at [Sametz Blackstone Associates](https://github.com/sametzblackstone) and simply wouldn't exist without it. The core of the vertical rhythm and forms is still primarily the work of [Tyler Childs](https://github.com/tylerchilds/). While I'm still using Cutestrap with a few modifications for a few other text-heavy projects, I also wanted something built to be customized further—mostly through configuration. Lastly, old habits die hard and I prefer a different naming convention, specifically one derived from Twitter Bootstrap.
 
